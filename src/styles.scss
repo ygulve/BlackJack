@@ -1,0 +1,334 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Plus imports for other components in your app.
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import "~bootstrap/scss/bootstrap";
+
+
+body {
+    width: 100%;
+    background: #efeff6;
+    //font-family: 'Roboto', sans-serif;
+    font-family: "Open Sans", sans-serif;
+    color: #71748d;
+    margin-top: 20px;
+  }
+  
+  ::placeholder {
+    font-size: 10px;
+  }
+  
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    font-size: 10px;
+  }
+  
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    font-size: 10px;
+  }
+  .homecontainer1 {
+    color: gray;
+    font-style: italic;
+  
+  }
+  
+.mainContainer {
+    width: 70%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  
+.buildcontainer {
+    display: grid;
+    grid-template-columns: 100% auto;
+  }
+  
+  .color-light {
+    background: white; // #57B3F1;
+  
+  }
+  
+.color-dark {
+    background-image: linear-gradient(to right, #01421e 0%, #02cc45 100%);
+  }
+
+  .homecol {
+    padding: .4em 1.3em;
+    font-weight: bold;
+    font-size: 14px;
+    color: grey;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .homecol1 {
+    padding: 1em 1em;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    
+  }
+
+  .label-container {
+    float: left;
+    width: auto;
+    text-align: justify;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  .txt-container {
+    margin-left: 200px;
+    width: 300px;
+  }
+  .label {
+    color: #525c65;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.5rem;
+    -webkit-font-smoothing: antialiased;
+  }  
+ 
+
+  .btnSubmit {
+    width: 30%;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #016830;
+    border: 0.125rem solid transparent;
+  }
+
+  .btnSubmitHit {
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #016830;
+    border: 0.125rem solid transparent;
+  }
+  .btnSubmitStay {
+    padding: 5px;  
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #a82323;
+    border: 0.125rem solid transparent;
+  }
+
+  h6,
+.h6 {        
+    padding-top: 2px;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #ffffff;
+  padding-left: 10px;
+}
+.gameContainerleft
+{
+   width: 50%;
+   float: left;
+   padding: 5px;
+  
+}
+
+.gameContainerright{
+    width: 50%;
+    float: right;
+    padding: 5px;  
+
+}
+
+.gameHead
+{    
+    background-color: #970383;
+    padding: 5px;
+    color: white;
+}
+
+.gameinnerContainer
+{
+    border: 1px solid gray;
+    padding: 10px;
+    height: 150px;
+    margin-bottom: 10px;
+    background-color: #01421e;
+   
+}
+
+
+.gamefooter
+{ 
+    padding: 10px;
+    background: rgb(66, 66, 66);
+    color: white;
+    height: 40px;
+}
+
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+.suit
+{   
+    border: 1px gray solid;
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    margin-left: 10px;  
+    font-size: 20px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    color: white;
+    float: left;
+}
+
+.message
+{
+  height: 50px;
+  padding :10px;
+}
+
+.playerWin
+{  
+  background-color: #01421e;
+  font-size: 20px;
+  color: white; 
+  text-align: center;
+}
+
+.dealerWin
+{  
+  background-color: #620080;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+
+
+}
+
+.dealerLost
+{
+  background-color: red;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+
+}
+
+
+.burst
+{
+  background-color: rgb(200, 255, 0);
+  font-size: 20px;
+  color: black;
+  text-align: center;
+
+}
+
+.draw
+{
+  background-color: rgb(3, 112, 185);
+  font-size: 20px;
+  color: white;
+  text-align: center;
+
+}
+
+.default{
+  background-color: rgb(100, 185, 3);
+  font-size: 20px;
+  color: black;
+  text-align: center;
+}
+
+.disableButton
+{
+  background-color: #71748d;
+}
+
+
+/* The Modal (background) */
+.modal {
+  font-size: 12px;
+  color: black;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 10px;
+  border: 1px solid #888;
+  width:60%; /* Could be more or less, depending on screen size */
+  
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Header */
+.modal-header {
+  padding:10px;
+  background-color: #5cb85c;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;
+  overflow-y: auto;
+  height:auto;
+}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  color: rgb(0, 0, 0);
+}
+
+table, th, td {
+  border: 1px solid rgb(117, 117, 117);
+  font: 8px;
+}
+
+.trHeader{
+  font-weight: bold;
+  background-color: rgb(53, 53, 53);
+  color: white;
+}

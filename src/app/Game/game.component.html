@@ -1,0 +1,118 @@
+<div class="mainContainer rounded">
+  <div class="homecontainer color-dark rounded">
+    <div class="homecol1">
+      <h6>Play Game</h6>
+    </div>
+  </div>
+  <div class="buildcontainer color-light">
+    <div class="col-md-16">
+      <div class="homecol">
+        <form [formGroup]="gamePage">
+
+          <input type="button" value="Hit" [ngClass]="{disableButton: isStay}" [disabled]="isStay"
+            class="btnSubmitHit rounded" (click)="Hit()" />&nbsp;
+          <input type="button" value="Stay" [ngClass]="{disableButton: isStay}" [disabled]="isStay"
+            class="btnSubmitStay rounded" (click)="Stay()" />
+          <br><br>
+
+          <div class="gameContainerleft">
+            <div class="gameHead">{{name}}</div>
+            <div class="gameinnerContainer">
+              <div *ngFor="let player of playedCards;let i=index;">
+                <span class="suit" [style.backgroundColor]="player.suit.color"
+                  [innerHTML]="player.suit.name"></span>                  
+              </div>
+            </div>
+            <div class="gamefooter">
+              <div class="left">
+                Points
+              </div>
+              <div class="right">
+                {{PlayerTotal}}</div>
+            </div>
+
+          </div>
+          <div class="gameContainerright">
+            <div class="gameHead">Dealer</div>
+            <div class="gameinnerContainer">
+              <div *ngFor="let player of cardsPlayedDeal;let i=index;">
+                <span class="suit" [style.backgroundColor]="player.suit.color"
+                  [innerHTML]="player.suit.name"></span>
+              </div>
+            </div>
+            <div class="gamefooter">
+              <div class="left">
+                Points
+              </div>
+              <div class="right">
+                {{DealerTotal}}</div>
+            </div>
+          </div> <br><br>
+
+
+          <input type="button" value="Play Again" [ngClass]="{disableButton: playAgain}" [disabled]="playAgain"
+            class="btnSubmitHit rounded" #closeAddExpenseModal (click)="PlayAgain()" />&nbsp;
+          <input type="button" value="View Report" class="btnSubmitStay rounded" (click)="Report('myModal')"
+            [ngClass]="{disableButton: playAgain}" [disabled]="playAgain" />
+
+
+          <div class="message">
+            <div class="default" *ngIf="default">
+              {{message}}
+            </div>
+            <div class="playerWin" *ngIf="PlayerWin">
+              {{message}}
+            </div>
+            <div class="burst" *ngIf="Playerbust">
+              {{message}}
+            </div>
+            <div class="burst" *ngIf="Dealerbust">
+              {{message}}
+            </div>
+            <div class="dealerWin" *ngIf="DealerWin">
+              {{message}}
+            </div>
+            <div class="dealerLost" *ngIf="DealerLost">
+              {{message}}
+            </div>
+            <div class="draw" *ngIf="Draw">
+              {{message}}
+            </div>
+          </div>
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      Session Report
+    </div>
+    <div class="modal-body">
+
+      <table cellpadding="5" style="width: 100%;text-align: center;">
+        <tr class="trHeader">
+          <td>Game No</td>
+          <td>Player Points</td>
+          <td>Dealer Points</td>
+          <td>Result</td>
+        </tr>
+        <tr *ngFor="let item of finalResult">
+          <td>{{item.GameNo}}</td>
+          <td>{{item.PlayerScore}}</td>
+          <td>{{item.DealerScore}}</td>
+          <td>{{item.Output}}</td>
+        </tr>
+      </table>
+
+    </div>
+    <div class="modal-footer">
+      <input type="button" value="Close" class="btnSubmitStay rounded" (click)="Close('myModal')">
+    </div>
+  </div>
+
+</div>

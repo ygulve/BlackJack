@@ -1,0 +1,32 @@
+<div class="mainContainer rounded">
+  <div class="homecontainer color-dark rounded">
+    <div class="homecol1">
+
+      <h6>Player</h6>
+    </div>
+  </div>
+  <div class="buildcontainer color-light">
+    <div class="col-md-16">
+      <div class="homecol">
+        <form [formGroup]="playerPage">
+          <div class="label-container">
+            <label>Please enter player name</label>
+          </div>
+          <div class="txt-container">
+            <input type="text" class="form-control" formControlName='PlayerName' placeholder="Player Name" value=""
+              [ngClass]="{ 'is-invalid': submitted && f.PlayerName.errors }" />
+            <div *ngIf="submitted && f.PlayerName.errors" class="invalid-feedback">
+              <div *ngIf="f.PlayerName.errors.required">Player Name is required</div>
+            </div>
+          </div> <br>
+          <div class="label-container">
+          </div>
+          <div class="txt-container">
+            <input type="submit" class="btnSubmit rounded" (click)="submit(playerPage)" value="Submit" /> &nbsp;
+            <input type="reset" class="btnSubmit rounded" value="Reset" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
